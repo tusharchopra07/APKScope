@@ -3,15 +3,15 @@ package main
 import (
 	"log"
 
-	"github.com/charmbracelet/bubbletea"
+	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/<your-username>/apkscope/internal/app"
+	"github.com/tusharchopra07/APKScope/internal/app"
 )
 
 func main() {
-	p := bubbletea.NewProgram(
+	p := tea.NewProgram(
 		app.New(),
-		bubbletea.WithAltScreen(),
+		tea.WithAltScreen(),
 	)
 
 	if _, err := p.Run(); err != nil {
